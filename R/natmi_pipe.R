@@ -114,14 +114,14 @@ call_natmi <- function(
         if(assay.type=="counts"){
             write.csv(GetAssayData(object = sce,
                                    assay = "RNA",
-                                   slot = "counts"),
+                                   layer = "counts"),
                       file = .csv_path,
                       row.names = TRUE)
         } else{
             write.csv(100 * (exp(as.matrix(
                 GetAssayData(object = sce,
                              assay = assay,
-                             slot = "data"))) - 1),
+                             layer = "data"))) - 1),
                 file = .csv_path,
                 row.names = TRUE)
         }
