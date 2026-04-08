@@ -60,10 +60,10 @@ liana_prep.Seurat <- function(sce,
         list(
             counts = SeuratObject::GetAssayData(object = sce,
                                                 assay = assay,
-                                                slot = "counts"),
+                                                layer = "counts"),
             logcounts = SeuratObject::GetAssayData(object = sce,
                                                    assay = assay,
-                                                   slot = "data")
+                                                   layer = "data")
         ),
         metadata = sce@meta.data)
 
