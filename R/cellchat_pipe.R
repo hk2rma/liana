@@ -64,11 +64,11 @@ call_cellchat <- function(sce,
         object = `if`(!.normalize,
                       GetAssayData(sce,
                                    assay = assay,
-                                   slot = "data"), # works with lognorm data
+                                   layer = "data"), # works with lognorm data
                       CellChat::normalizeData(
                           GetAssayData(sce,
                                        assay = assay,
-                                       slot = "data"))
+                                       layer = "data"))
                       ),
         meta = meta,
         group.by = "group")
